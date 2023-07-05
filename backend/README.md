@@ -13,7 +13,7 @@ cd kittygram_backend
 Cоздать и активировать виртуальное окружение:
 
 ```
-python3 -m venv env
+python -m venv env
 ```
 
 * Если у вас Linux/macOS
@@ -25,7 +25,7 @@ python3 -m venv env
 * Если у вас windows
 
     ```
-    source env/scripts/activate
+    source env/Scripts/activate
     ```
 
 ```
