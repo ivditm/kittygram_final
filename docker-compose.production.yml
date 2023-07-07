@@ -16,16 +16,16 @@ services:
     env_file: .env
     volumes:
       - static:/backend_static
-      - midia:/app/media
-    frontend:
-      image: ivdit/kittygram_frontend
-      command: cp -r /app/build/. /static/
-      volumes:
-        - static:/static
-    gateway:
-      image: ivdit/kittygram_gateway
-      ports:
-        - 9000:80
-      volumes:
-        -static:/static
-        - media:/app/media
+      - media:/app/media
+  frontend:
+    image: ivdit/kittygram_frontend
+    command: cp -r /app/build/. /static/
+    volumes:
+      - static:/static
+  gateway:
+    image: ivdit/kittygram_gateway
+    ports:
+      - 9000:80
+    volumes:
+      - static:/static
+      - media:/app/media
