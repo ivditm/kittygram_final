@@ -19,6 +19,7 @@ services:
       - media:/app/media
   frontend:
     image: ivdit/kittygram_frontend
+    env_file: .env
     command: cp -r /app/build/. /static/
     volumes:
       - static:/static
